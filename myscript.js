@@ -12,8 +12,9 @@ const output_mass2_mobile = document.getElementById("output-mass2-mobile");
 
 const calc_btn1 = document.getElementById("calc-btn1");
 const calc_btn2 = document.getElementById("calc-btn2");
-const CONVERSION_FACTOR = 1296.418671059857;
-// const CONVERSION_FACTOR = 1296.4;
+//const CONVERSION_FACTOR = 1296.418671059857; // 0.1x solid to gas
+// const CONVERSION_FACTOR = 1296.4; // 0.1x solid to gas rounded
+const CONVERSION_FACTOR = 1037.13493684788584; //0.08x solid to gas accurate
 
 const labels = document.querySelectorAll(".label");
 // calc_rows is where to display each calculation step
@@ -172,7 +173,7 @@ function getForm2Values() {
 }
 
 function calculate1() {
-    // fast calculation
+    // fast calculation 2.5928373421197146
     let final_result = mass1 * CONVERSION_FACTOR;
     final_result /= volume1;
 
@@ -212,11 +213,11 @@ function calculate1() {
     calc_rows1[6].innerHTML = `1 / <span class="purple-text">${roundToDecimals(volume1,3)} ft<sup>3</sup></span> * 35.5 ft<sup>3</sup> / 1 m<sup>3</sup> <br>= 1 / ${roundToDecimals(new_volume1,3)} m<sup>3</sup>`;
 
     new_val = prev_val / new_volume1;
-    calc_rows1[7].innerHTML = `${prev_val} * 1 / ${roundToDecimals(new_volume1,3)} <br>= <span class="purple-text">${roundToDecimals(new_val,3)} ppm</span>`;
+    calc_rows1[7].innerHTML = `${roundToDecimals(prev_val,3)} * 1 / ${roundToDecimals(new_volume1,3)} <br>= <span class="purple-text">${roundToDecimals(new_val,3)} ppm</span>`;
 
-    // console.log(new_val);
-    // round ppm value to whole number
-    return roundToDecimals( final_result, 1 );
+    console.log(new_val);
+    // round ppm value to 1 decimal place. Even though it is not necesarily practical, it reduces the margin of error from rounding
+    return roundToDecimals( final_result, 1 )
     
 }
 

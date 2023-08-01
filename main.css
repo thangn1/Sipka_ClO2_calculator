@@ -169,7 +169,7 @@ https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/*/
   position: absolute;
   left: 55%;
   top: 50%;
-  transform: translateY(-90%);
+  transform: translateY(-80%);
   line-height: 150%;
 }
 .calc-row:nth-child(even) {
@@ -247,7 +247,7 @@ footer {
     transform: translate(-50%, 25%);
   }
 
-  #show-calc1, #show-calc2
+  #show-calc1
   {
     margin-top: 80px;
   }
@@ -267,6 +267,14 @@ footer {
     border-radius: 5px;
     background-color: #BEBAC6;
     margin: 30px auto 0;
+  }
+  
+  .rounding-msg {
+    margin-top: 70px;
+    margin-bottom: 0;
+  }
+  #show-calc2 {
+    margin-top: 40px;
   }
   
 }
@@ -298,5 +306,9 @@ footer {
     width: 72px;
     height: 72px;
     transform: translate(-50%, 35%);
+  }
+  .rounding-msg {
+    margin-top: 60px;
+    margin-bottom: 0;
   }
 }
