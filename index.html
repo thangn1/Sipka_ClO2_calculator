@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sipka ClO2</title>
+  <link rel="stylesheet" href="main.css">
+  <!--import google font: Inter-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- page title -->
+    <h1>Calculator for Chlorine Dioxide concentration in a given space for Sipka products</h1>
+  </header>
+
+  <main>
+    <!-- input input -> output -->
+    <section>
+      <!-- input mass -->
+      <div> 
+        <p class="label">Enter amount of sample in cannister (in grams)</p> <!-- labels[0] -->
+        <input id="input-mass1" class="input field" type="number">
+      </div>
+
+      <!-- input volume -->
+      <div> 
+        <p class="label">Enter volume of space to decontaminate (in cubic feet)</p> <!-- labels[1] -->
+        <input id="input-volume1" class="input field" type="number">
+      </div>
+
+      <!-- -> -->
+      <div class="arrow-div"> 
+        <img class="arrow" id="arrow-right" src="images/arrow_big.svg" alt="arrow pointing right">
+      </div>
+
+      <!-- output conc-->
+      <div class="output-div"> 
+        <p class="label">ClO<sub>2</sub> concentration in the given space (in ppm)</p> <!-- labels[2] -->
+        <p id="output-conc1" class="output field"></p>
+        <img class="half-circle" src="images/circle_purple.svg">
+      </div>
+
+    </section>
+    <!-- calculate button. onclick run computation function -->
+    <button id="calc-btn1" class="calc-btn">Calculate</button>
+
+    <!-- secondary output for different layout on small width screen-->
+    <div class="output-div-mobile"> 
+      <p class="label">ClO<sub>2</sub> concentration in the given space (in ppm)</p> <!-- labels[3] -->
+      <p id="output-conc1-mobile" class="output field"></p>
+      <img class="half-circle" src="images/circle_purple.svg">
+    </div>
+
+    <!-- onclick, show #calc-details1 -->
+    <p id="show-calc1">Show calculations</p>
+
+    <div id="calc-details1" class="calc-details">
+      <p class="semibold">Using the Ideal Gas Law PV=nRT</p>
+      <!-- calc-row has calculation (created by js function) and readable explanation of that calculation-->
+      <div class="calc-row">
+        <p>calculation 1/8</p>
+        <p>Convert mass of solid powder in sample to mass of ClO<sub>2</sub> gas released.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 2/8</p>
+        <p>Convert mass of ClO<sub>2</sub> gas to moles using its molecular weight.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 3/8</p>
+        <p>Convert moles of ClO<sub>2</sub> to moles of liters.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 4/8</p>
+        <p>Convert moles of liters of ClO<sub>2</sub> to moles of milliliters.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 5/8</p>
+        <p>Multiply by temperature ratio T<sub>ambient</sub> / T<sub>0</sub> (25°C / 0°C).</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 6/8</p>
+        <p>Multiply by pressure ratio and R ratio.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 7/8</p>
+        <p>Convert volume from cubic feet to cubic meters.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 8/8</p>
+        <p>Divide moles (in mL) by volume (in m<sup>3</sup>). Result is in parts per million.</p>
+      </div>
+      <!-- onclick, hide #calc-details1 -->
+      <p id="hide-calc1">Hide calculations</p>
+    </div>
+
+    <div class="divider-line"></div>
+
+    <!-- output <- input input -->
+    <section>
+      <!-- outupt mass -->
+      <div class="output-div">
+        <p class="label">Amount of sample in cannister (in grams)*</p> <!-- labels[4] -->
+        <p id="output-mass2" class="output field"></p>
+        <img class="half-circle" src="images/circle_purple.svg">
+      </div>
+
+      <!-- <- -->
+      <div class="arrow-div">
+        <img class="arrow" id="arrow-left" src="images/arrow_big.svg" alt="arrow pointing left">
+      </div>
+
+      <!-- input volume -->
+      <div>
+        <p class="label">Enter volume of space to decontaminate (in cubic feet)</p> <!-- labels[5] -->
+        <input id="input-volume2" class="input field" type="number">
+      </div>
+      
+      <!-- input conc -->
+      <div>
+        <p class="label">Enter ClO<sub>2</sub> concentration in the given space (in ppm)</p> <!-- labels[6] -->
+        <input id="input-conc2" class="input field" type="number">
+      </div>
+    </section>
+
+    <!-- calculate button. onclick run computation function -->
+    <button id="calc-btn2" class="calc-btn">Calculate</button>
+
+    <!-- secondary output for different layout on small width screen-->
+    <div class="output-div-mobile">
+      <p class="label">Amount of sample in cannister (in grams)</p> <!-- labels[7] -->
+      <p id="output-mass2-mobile" class="output field"></p>
+      <img class="half-circle" src="images/circle_purple.svg">
+    </div>
+    
+    <p class="purple-text">*Due to rounding, accuracy may vary </p>
+
+    <!-- onclick, show #calc-details2 -->
+    <p id="show-calc2">Show calculations</p>
+
+    <div id="calc-details2" class="calc-details">
+      <p class="semibold">Using the Ideal Gas Law PV=nRT</p>
+      <!-- calc-row has calculation (created by js function) and readable explanation of that calculation-->
+      <div class="calc-row">
+        <p>calculation 1/8</p>
+        <p>Convert volume from cubic feet to cubic meters.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 2/8</p>
+        <p>Multiply ClO<sub>2</sub> concentration by the volume of space.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 3/8</p>
+        <p>Multiply by pressure ratio and R ratio.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 4/8</p>
+        <p>Multiply by temperature ratio T<sub>0</sub> / T<sub>ambient</sub> (0°C / 25°C).</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 5/8</p>
+        <p>Convert moles of milliliters of ClO<sub>2</sub> to moles of liters.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 6/8</p>
+        <p>Convert moles of liters of ClO<sub>2</sub> to moles.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 7/8</p>
+        <p>Convert moles to mass of ClO<sub>2</sub> gas using its molecular weight.</p>
+      </div>
+      <div class="calc-row">
+        <p>calculation 8/8</p>
+        <p>Convert mass of ClO<sub>2</sub> gas released to mass of solid powder in sample. </p>
+      </div>
+      <!-- onclick, hide calc-details2 -->
+      <p id="hide-calc2">Hide calculations</p>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <div id="contact-card">
+      <img src="images/sipkalogo2.jpg" alt="Sipka Labs">
+      <p class="tagline">Reliable and comprehensive chemistry</p>
+      <p class="address">201 Blackford Avenue<br>Middlesex, NJ 08846, USA</p>
+      <a href="www.sipkalabs.com">www.sipkalabs.com</a>
+    </div>
+  </footer>
+
+
+
+  <script src="myscript.js"></script>
+</body>
+</html>
+

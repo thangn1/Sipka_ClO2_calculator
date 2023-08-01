@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #BEBAC650;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 5px solid #843747;
+  max-width: 1196px;
+  margin: 0 auto;
+}
+header h1 {
+  text-align: center;
+  max-width: 841px;
+  margin: 0 auto;
+  padding: 53px ;
+  color: #382B59;
+  letter-spacing: 0.01em;
+  line-height: 150%;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1196px;
+  background-color: #FAF8E1;
+  padding-bottom: 114px;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 90px;
+  padding: 72px 0 59px;
+}
+
+.label {
+  width: 250px;
+  color: #382B59;
+}
+
+section div {
+  margin: 0 15px;
+}
+
+.field {
+  width: 244px;
+  height: 92px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: #382B59;
+}
+/*Disable arrows on number input
+https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/*/
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input[type=number]{
+    -moz-appearance: textfield;
+}
+
+.input {
+  border: 5px solid #BEBAC6;
+}
+.input:focus-visible,
+.input:focus {
+  border: 5px solid #A299B4;
+  outline: none;
+}
+
+
+.arrow-div {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+.arrow{
+  max-width: 115px;   
+}
+#arrow-left {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.output-div {
+  position: relative;
+  z-index: 1;
+}
+.output {
+  border-bottom: 5px solid #382B59;
+  margin: 0;
+  line-height: 2.5;
+}
+.half-circle {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+
+.calc-btn {
+  color: #fff;
+  background-color: #6E6084;
+  padding: 23px 92px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 0;
+}
+.calc-btn:hover,
+.calc-btn:active {
+  background-color: #54456c;
+}
+
+#show-calc1, #show-calc2,
+#hide-calc1, #hide-calc2 {
+  margin: 20px 0;
+  text-decoration: underline;
+  color: #6E6084;
+  cursor: pointer;
+}
+#show-calc1:hover, #show-calc2:hover,
+#hide-calc1:hover, #hide-calc2:hover,
+#show-calc1:focus, #show-calc2:focus,
+#hide-calc1:focus, #hide-calc2:focus {
+  color: #382B59;
+}
+
+.semibold {
+  font-weight: 600;
+  padding: 24px 0;
+  margin: 0;
+}
+.calc-details {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 895px;
+  margin: 0 auto;
+  padding-bottom: 1px;
+}
+.calc-row {
+  display: flex;
+  /* justify-content: space-between; */
+  text-align: left;
+  padding: 0px 0; /*being overwritten somewhere else*/
+  position: relative;
+  /* align-items: center; */
+  
+}
+.calc-row p:first-child{
+  margin-left: 84px;
+  line-height: 150%;
+}
+.calc-row p:last-child {
+  margin-right: 63px;
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translateY(-90%);
+  line-height: 150%;
+}
+.calc-row:nth-child(even) {
+  background-color: #BEBAC615;
+}
+.calc-row:nth-child(odd) {
+  background-color: #BEBAC605;
+}
+.calc-row:nth-child(4) p:last-child,
+.calc-row:nth-child(7) p:last-child  {
+  top: 40%;
+}
+
+.purple-text {
+  color: #382B59;
+}
+
+footer {
+  background-color: #BEBAC6;
+  padding: 47px 0;
+}
+#contact-card {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 453px; /*280 * 1.618, golden ratio*/
+  /* height: 280px; */
+  text-align: left;
+  line-height: 130%;
+}
+.tagline {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #382B59;
+  line-height: 150%;
+}
+.address {
+  line-height: 150%;
+}
+#contact-card a {
+  color: #000;
+  text-decoration: none;
+}
+#contact-card a:hover,
+#contact-card a:focus {
+  text-decoration: underline;
+}
+
+.output-div-mobile {
+  display: none;
+}
+.divider-line {
+  display: none;
+}
+
+
+@media (max-width: 1024px) {
+  .arrow-div {
+    display: none;
+  }
+  .output-div {
+    display: none;
+  }
+  .output-div-mobile {
+    display: block;
+    margin: 0 auto;
+    width: min-content;
+    position: relative;
+    z-index: 1;
+  }
+  .half-circle {
+    width: 98px;
+    height: 98px;
+    transform: translate(-50%, 25%);
+  }
+
+  #show-calc1, #show-calc2
+  {
+    margin-top: 80px;
+  }
+  .calc-row {
+    flex-direction: column;
+    padding: 0;
+  }
+  .calc-row p:last-child {
+    position: static;
+    margin: 30px auto 0 84px;
+  }
+
+  .divider-line {
+    display: block;
+    height: 5px;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #BEBAC6;
+    margin: 30px auto 0;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+    padding: 36px 0;
+    margin: 0 40px;
+  }
+  .label {
+    margin: 23px auto;
+  }
+
+  .field {
+    width: 251px;
+    height: 61px;
+    font-size: 1.5rem;
+  }
+
+  .calc-row p {
+    margin-left: 30px !important;
+  }
+  .calc-row p:last-child {
+    transform: translateY(-60%);
+  }
+
+  .half-circle {
+    width: 72px;
+    height: 72px;
+    transform: translate(-50%, 35%);
+  }
+}
