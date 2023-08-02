@@ -1,11 +1,13 @@
 # Sipka ClO<sub>2</sub> calculator
 
-This project was created to aid the manufacturing of Chlorine Dioxide products for Sipka Labs.
-This chemical is dangerous if it is released at a fast rate; therefore, the concentration of gas in ppm should be low and <strong>must</strong> be calculated correctly.
+This project was created to calculate Chlorine Dioxide gas in a given space from Sipka Labs controlled release Chlorine Dioxide powdered mix.
+This calculation helps how much Chlorine Dioxide mix can generate Chlorine Dioxide for a given space in cubic feet, or the reverse. 
+The manufacturing of powdered mix to generate a safer level of anti-viral Chlorine Dioxide products.
+
 
 ## Features
-This calculator uses high-school level chemistry (Ideal Gas Law: PV=nRT) to dynamically calculate the concentration of ClO<sub>2</sub> gas released according to the volume of space and the amount of ClO<sub>2</sub>-generating product. <br>( input_mass + input_volume -> output_concentration )<br><br> 
-The reverse calculation can also be computed, meaning given the desired concentration of ClO<sub>2</sub> and the volume of space, the result will be the amount of ClO<sub>2</sub>-generating product. <br>( output_mass <- input_volume + input_concentration )<br><br>
+This calculator uses high-school level chemistry (Ideal Gas Law: PV=nRT) to dynamically calculate the concentration of ClO<sub>2</sub> gas released according to 8% times the amount of ClO<sub>2</sub>-generating product and the volume of space. <br>( input_mass + input_volume -> output_concentration )<br><br> 
+The reverse calculation can also be computed, meaning given the desired concentration of ClO<sub>2</sub> in a volume of space, the result will be the amount of powdered ClO<sub>2</sub>-generating product. <br>( output_mass <- input_volume + input_concentration )<br><br>
 The calculations under the hood have been simplified, but for a full walkthrough of the math, you can click "Show calculations" to reveal step-by-step calculations and explanations. Once you understand these details, you can click "Hide calculations" to hide this.<br><br>
 There is also some input validation. The inputs are required to be numbers and if one or more fields are empty, the calculation will not run and the labels of the empty fields will turn red to remind the user to enter the required values in order to calculate the desired result.
 
