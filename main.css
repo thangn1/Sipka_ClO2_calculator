@@ -311,4 +311,7 @@ footer {
     margin-top: 60px;
     margin-bottom: 0;
   }
+  header h1 {
+    padding: 23px;
+  }
 }
