@@ -1,5 +1,4 @@
-# Sipka ClO<sub>2</sub> calculator
-## <a href="https://endearing-jalebi-faca97.netlify.app/" target="_blank">sipkaClO2calculator</a>
+# <a href="https://endearing-jalebi-faca97.netlify.app/" target="_blank">sipkaClO<sub>2</sub>calculator</a>
 [sipkaClO2calculator](https://endearing-jalebi-faca97.netlify.app/)
 This project was created to calculate Chlorine Dioxide gas in a given space from Sipka Labs controlled release Chlorine Dioxide powdered mix.
 This calculation helps how much Chlorine Dioxide mix can generate Chlorine Dioxide for a given space in cubic feet, or the reverse. 
