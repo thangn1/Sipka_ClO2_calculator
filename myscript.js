@@ -22,27 +22,43 @@ const calc_rows1 = document.querySelectorAll("#calc-details1 .calc-row p:first-c
 const calc_rows2 = document.querySelectorAll("#calc-details2 .calc-row p:first-child");
 
 // show calculations, onclick show calc-details1
-const show_calc1 = document.getElementById("show-calc1");
-const hide_calc1 = document.getElementById("hide-calc1");
+const show_calc1 = document.querySelector(".show-calc1");
+const hide_calc1 = document.querySelectorAll(".hide-calc1");
 const calc_details1 = document.getElementById("calc-details1");
+const hidden_hide_calc1 = document.querySelector(".hide-calc1.hidden-label");
+// console.log(hidden_hide_calc1);
+
 // by default hide calculation details
 calc_details1.style.display = "none";
 // if show calculations is clicked, show calc-details
 show_calc1.addEventListener("click", function () {
     // if output is not empty
     if (output_conc1.textContent || output_conc1_mobile.textContent) {
+        // show big block of calculation details
         calc_details1.style.display = "block";
+        show_calc1.style.display = "none";
+        hidden_hide_calc1.style.display = "block";
+
     }
+
 })
 // if hide calculations is clicked, hide calc-details
-hide_calc1.addEventListener("click", function () {
+hide_calc1[0].addEventListener("click", function () {
     calc_details1.style.display = "none";
+    hidden_hide_calc1.style.display = "none";
+    show_calc1.style.display = "block";
+})
+hide_calc1[1].addEventListener("click", function () {
+    calc_details1.style.display = "none";
+    hidden_hide_calc1.style.display = "none";
+    show_calc1.style.display = "block";
 })
 
 // show calculations, onclick show calc-details2
-const show_calc2 = document.getElementById("show-calc2");
-const hide_calc2 = document.getElementById("hide-calc2");
+const show_calc2 = document.querySelector(".show-calc2");
+const hide_calc2 = document.querySelectorAll(".hide-calc2");
 const calc_details2 = document.getElementById("calc-details2");
+const hidden_hide_calc2 = document.querySelector(".hide-calc2.hidden-label");
 // by default hide calculation details
 calc_details2.style.display = "none";
 // if show calculations is clicked, show calc-details
@@ -50,11 +66,20 @@ show_calc2.addEventListener("click", function () {
     // if output is not empty
     if (output_mass2.textContent || output_mass2_mobile.textContent) {
         calc_details2.style.display = "block";
+        show_calc2.style.display = "none";
+        hidden_hide_calc2.style.display = "block";
     }
 });
 // if hide calculations is clicked, hide calc-details
-hide_calc2.addEventListener("click", function () {
+hide_calc2[0].addEventListener("click", function () {
     calc_details2.style.display = "none";
+    hidden_hide_calc2.style.display = "none";
+    show_calc2.style.display = "block";
+});
+hide_calc2[1].addEventListener("click", function () {
+    calc_details2.style.display = "none";
+    hidden_hide_calc2.style.display = "none";
+    show_calc2.style.display = "block";
 });
 
 // initialize input var values
@@ -276,3 +301,4 @@ function roundToDecimals(num, numdecimals) {
     return (Math.round(num*(10**numdecimals))) / (10**numdecimals);
 }
 //console.log("TEST"+roundToDecimals(0.123456, 3)); // RETURN 0.123
+

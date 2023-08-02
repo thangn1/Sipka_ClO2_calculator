@@ -125,19 +125,20 @@ https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/*/
   background-color: #54456c;
 }
 
-#show-calc1, #show-calc2,
-#hide-calc1, #hide-calc2 {
+.show-calc1, .show-calc2,
+.hide-calc1, .hide-calc2 {
   margin: 20px 0;
   text-decoration: underline;
   color: #6E6084;
   cursor: pointer;
 }
-#show-calc1:hover, #show-calc2:hover,
-#hide-calc1:hover, #hide-calc2:hover,
-#show-calc1:focus, #show-calc2:focus,
-#hide-calc1:focus, #hide-calc2:focus {
+.show-calc1:hover, .show-calc2:hover,
+.hide-calc1:hover, .hide-calc2:hover,
+.show-calc1:focus, .show-calc2:focus,
+.hide-calc1:focus, .hide-calc2:focus {
   color: #382B59;
 }
+
 
 .semibold {
   font-weight: 600;
@@ -223,6 +224,10 @@ footer {
   display: none;
 }
 .divider-line {
+  display: none;
+}
+
+.hidden-label {
   display: none;
 }
 
