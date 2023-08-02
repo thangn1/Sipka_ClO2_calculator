@@ -2,7 +2,7 @@
 
 This project was created to calculate Chlorine Dioxide gas in a given space from Sipka Labs controlled release Chlorine Dioxide powdered mix.
 This calculation helps how much Chlorine Dioxide mix can generate Chlorine Dioxide for a given space in cubic feet, or the reverse. 
-The manufacturing of powdered mix to generate a safer level of anti-viral Chlorine Dioxide products.
+The manufacturing of this powdered mix is to generate a safer level of anti-viral Chlorine Dioxide products.
 
 
 ## Features
