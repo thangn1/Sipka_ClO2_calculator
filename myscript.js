@@ -181,7 +181,7 @@ function calculate1() {
     let new_val = null;
     let prev_val = null;
     
-    new_val = mass1 * 0.08;
+    new_val = mass1 * 0.08; // 8% yield from solid mix to gas
     calc_rows1[0].innerHTML = `<span class="purple-text">${roundToDecimals(mass1,3)} g</span> * 0.08 <br>= ${roundToDecimals(new_val,3)} g`;
 
     prev_val = new_val;
@@ -262,7 +262,7 @@ function calculate2() {
 
     prev_val = new_val;
 
-    new_val = prev_val * 8;
+    new_val = prev_val / 0.08;
     calc_rows2[7].innerHTML = `${roundToDecimals(prev_val,3)} g * 8 <br>= ${roundToDecimals(new_val,3)} g`;
 
     // round final result to 1 decimal place
