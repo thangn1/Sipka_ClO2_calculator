@@ -290,6 +290,7 @@ function calculate2() {
     new_val = prev_val / 0.08;
     calc_rows2[7].innerHTML = `${roundToDecimals(prev_val,3)} g * 8 <br>= ${roundToDecimals(new_val,3)} g`;
 
+    console.log(new_val); 
     // round final result to 1 decimal place
     return roundToDecimals( final_result , 1);
     // console.log(final_result);
