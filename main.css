@@ -10,7 +10,7 @@ body {
 
 header {
   background-color: #fff;
-  border-bottom: 5px solid #843747;
+  border-bottom: 4px solid #843747;
   max-width: 1196px;
   margin: 0 auto;
 }
@@ -18,10 +18,11 @@ header h1 {
   text-align: center;
   max-width: 841px;
   margin: 0 auto;
-  padding: 53px ;
+  padding: 33px 53px;
   color: #382B59;
   letter-spacing: 0.01em;
   line-height: 150%;
+  font-weight: 600;
 }
 
 main {
@@ -53,9 +54,10 @@ section div {
   background-color: #fff;
   border-radius: 5px;
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   color: #382B59;
+  border: 3px solid #6E6084;
 }
 /*Disable arrows on number input
 https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/*/
@@ -69,11 +71,11 @@ https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/*/
 }
 
 .input {
-  border: 5px solid #BEBAC6;
+  /* border: 5px solid #BEBAC6; */
 }
 .input:focus-visible,
 .input:focus {
-  border: 5px solid #A299B4;
+  border: 3px solid #382B59;
   outline: none;
 }
 
@@ -97,17 +99,19 @@ https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/*/
   z-index: 1;
 }
 .output {
-  border-bottom: 5px solid #382B59;
-  margin: 0;
+  /* border-bottom: 5px solid #382B59; */
+  margin: 0 auto;
   line-height: 2.5;
+  background-color: #F4F3F8;
 }
-.half-circle {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 20%);
+.output-underline {
+  height: 3px;
+  width: 100%;
+  background-color: #6E6084;
+  border-radius: 10px;
+  margin: 8px auto 0;
 }
+
 
 .calc-btn {
   color: #fff;
@@ -127,7 +131,7 @@ https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/*/
 
 .show-calc1, .show-calc2,
 .hide-calc1, .hide-calc2 {
-  margin: 20px 0;
+  margin: 30px 0;
   text-decoration: underline;
   color: #6E6084;
   cursor: pointer;
@@ -241,21 +245,14 @@ footer {
   }
   .output-div-mobile {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
     width: min-content;
     position: relative;
     z-index: 1;
   }
-  .half-circle {
-    width: 98px;
-    height: 98px;
-    transform: translate(-50%, 25%);
-  }
+  
 
-  .show-calc1
-  {
-    margin-top: 80px;
-  }
+  
   .calc-row {
     flex-direction: column;
     padding: 0;
@@ -267,7 +264,7 @@ footer {
 
   .divider-line {
     display: block;
-    height: 5px;
+    height: 3px;
     width: 80%;
     border-radius: 5px;
     background-color: #BEBAC6;
@@ -275,7 +272,7 @@ footer {
   }
   
   .rounding-msg {
-    margin-top: 70px;
+    margin-top: 20px;
     margin-bottom: 0;
   }
   #show-calc2 {
@@ -307,11 +304,7 @@ footer {
     transform: translateY(-60%);
   }
 
-  .half-circle {
-    width: 72px;
-    height: 72px;
-    transform: translate(-50%, 35%);
-  }
+  
   .rounding-msg {
     margin-top: 60px;
     margin-bottom: 0;
